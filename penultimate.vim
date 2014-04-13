@@ -19,7 +19,7 @@ if exists("syntax_on")
 endif
 let g:colors_name="penultimate"
 
-hi Normal	guibg=#0b0b0b guifg=#dddddd
+hi Normal	guibg=#101010 guifg=#dddddd
 hi Cursor	guibg=khaki guifg=black
 hi CursorLine	guibg=#282320
 hi DiffAdd	guibg=#003311
@@ -48,7 +48,7 @@ hi SpecialKey	guibg=black guifg=red
 hi ErrorMsg	gui=bold guifg=white guibg=red
 
 " syntax highlighting groups
-hi Comment	guifg=#557777
+hi Comment	guifg=#668888
 "guifg=SkyBlue
 hi Constant	guifg=#ffa0a0
 hi Identifier	guifg=palegreen
