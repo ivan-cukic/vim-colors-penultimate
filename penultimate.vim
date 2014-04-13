@@ -48,7 +48,7 @@ hi SpecialKey	guibg=black guifg=red
 hi ErrorMsg	gui=bold guifg=white guibg=red
 
 " syntax highlighting groups
-hi Comment	guifg=#557799
+hi Comment	guifg=#557777
 "guifg=SkyBlue
 hi Constant	guifg=#ffa0a0
 hi Identifier	guifg=palegreen
