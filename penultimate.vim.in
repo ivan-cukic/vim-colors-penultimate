@@ -1,0 +1,172 @@
+" Vim color file                              "
+"                                             "
+" Maintainer:   Ivan Cukic                    "
+" Last Change:  $Date: 13. 4. 2014.$          "
+" URL:                                        "
+" Version:  $Id: penultimate.vim, v 1.0$      "
+"                                             "
+" Based on: Desert by Hans Fugal              "
+
+#define MAIN_BG        #151515
+#define MAIN_DARKER_BG #101010
+#define MAIN_FG        #dddddd
+
+#define MAIN_GREEN_BG  #152515
+#define MAIN_RED_BG    #552525
+#define MAIN_BLUE_BG   #153552
+
+#define PASSIVE_FG     #889988
+#define TRANSLUCENT_FG #333333
+
+#define CURSOR_FG   black
+#define CURSOR_BG   khaki
+#define CURSOR_LINE_BG           #282320
+#define CURSOR_LINE_HIGHLIGHT_BG #6f6760
+
+#define SPLITS_BG   #c2bfa5
+#define SPLITS_FG   black
+#define SPLITS      gui=none guifg=SPLITS_FG guibg=SPLITS_BG
+
+#define ERROR_BG    darkred
+#define ERROR_FG    yellow
+#define ERROR_GUI   bold
+#define ERROR       gui=ERROR_GUI guifg=ERROR_FG guibg=ERROR_BG
+
+#define WARNING_BG  darkorange
+#define WARNING_FG  black
+#define WARNING_GUI bold
+#define WARNING     gui=WARNING_GUI guifg=WARNING_FG guibg=WARNING_BG
+
+#define STATUS_FG   seagreen
+
+#define SEARCH_FG     wheat
+#define SEARCH_BG     #cc7711
+#define SEARCH_INC_BG darkred
+
+#define TITLE_FG      indianred
+
+set background=dark
+hi clear
+if exists("syntax_on")
+    syntax reset
+endif
+let g:colors_name="penultimate"
+
+
+" Normal text "
+
+hi Normal           guibg=MAIN_BG        guifg=MAIN_FG
+hi NonText          guibg=MAIN_DARKER_BG guifg=MAIN_FG
+hi Visual           guibg=PASSIVE_FG     guifg=MAIN_BG
+
+hi Cursor           guibg=CURSOR_BG guifg=CURSOR_FG
+hi CursorLine       guibg=CURSOR_LINE_BG
+hi ColorColumn      guibg=CURSOR_LINE_HIGHLIGHT_BG
+
+hi IncSearch        guibg=SEARCH_INC_BG guifg=SEARCH_FG
+hi Search           guibg=SEARCH_BG     guifg=SEARCH_FG
+
+hi SpecialKey       ERROR
+hi Conceal          ERROR
+
+hi DiffAdd          guibg=MAIN_GREEN_BG
+hi DiffChange       guibg=MAIN_BLUE_BG
+hi DiffDelete       guibg=MAIN_RED_BG guifg=MAIN_RED_BG
+hi DiffText         ERROR
+
+" UI parts "
+
+hi LineNr           guibg=MAIN_DARKER_BG guifg=TRANSLUCENT_FG
+
+hi VertSplit        guibg=SPLITS_BG guifg=SPLITS_FG
+hi StatusLine       guibg=SPLITS_BG guifg=SPLITS_FG gui=bold
+hi StatusLineNC     guibg=SPLITS_FG guifg=SPLITS_BG gui=bold
+
+hi Question         guifg=STATUS_FG
+hi ModeMsg          guifg=STATUS_FG
+hi MoreMsg          guifg=STATUS_FG
+hi ErrorMsg         ERROR
+hi WarningMsg       WARNING
+
+hi Pmenu            guibg=CURSOR_LINE_BG
+hi PmenuSel         guibg=CURSOR_LINE_HIGHLIGHT_BG
+
+hi Folded           guibg=grey30 guifg=gold
+hi FoldColumn       guibg=grey30 guifg=tan
+
+hi Title            guifg=TITLE_FG
+hi WildMenu         guibg=CURSOR_LINE_HIGHLIGHT_BG guifg=black gui=bold
+
+" Syntax highlighting groups "
+
+#define COMMENT_FG           #668888
+#define PREPROC_FG           indianred
+#define PREPROC_HIGHLIGHT_FG lightred
+
+#define LITERAL_BG       #0b0b0b
+#define LITERAL_FG       lightgreen
+#define STRING_FG        salmon
+#define CHARACTER_FG     skyblue
+#define BOOLEAN_TRUE_FG  seagreen2
+#define BOOLEAN_FALSE_FG tomato
+
+#define IDENTIFIER_FG    palegreen
+#define STATEMENT_FG     khaki
+#define TYPE_FG          #68bb88
+#define SPECIAL_FG       firebrick1
+#define KEYWORD_FG       #eeee77
+
+hi Comment          guifg=COMMENT_FG
+
+hi Todo             ERROR
+hi String           guibg=LITERAL_BG guifg=STRING_FG
+hi Character        guibg=LITERAL_BG guifg=CHARACTER_FG
+hi Boolean          guibg=LITERAL_BG gui=bold
+hi BooleanTrue      guifg=BOOLEAN_TRUE_FG
+hi BooleanFalse     guifg=BOOLEAN_FALSE_FG
+hi Constant         guibg=LITERAL_BG guifg=LITERAL_FG
+hi Passive          guifg=PASSIVE_FG
+
+hi Identifier       guifg=IDENTIFIER_FG
+hi Statement        guifg=STATEMENT_FG
+hi PreProc          guifg=PREPROC_FG
+hi Type             guifg=TYPE_FG gui=bold
+hi Special          guifg=SPECIAL_FG
+hi Ignore           guifg=COMMENT_FG
+hi Keyword          guifg=KEYWORD_FG gui=bold
+
+" Language specific "
+
+" C/C++ "
+
+hi cIncluded        guifg=PREPROC_HIGHLIGHT_FG
+hi cStorageClass    guifg=TYPE_FG gui=bold
+hi cppStructure     guifg=KEYWORD_FG gui=bold
+
+hi qtMacros         guifg=SPECIAL_FG
+hi kdeMacros        guifg=SPECIAL_FG
+
+#define DOXYGEN_MAIN       cadetblue3
+#define DOXYGEN_DECORATION TRANSLUCENT_FG
+#define DOXYGEN_SECONDARY  PASSIVE_FG
+#define DOXYGEN_OTHER deepskyblue1
+
+hi doxygenBrief     guifg=DOXYGEN_MAIN
+hi doxygenSpecialMultilineDesc guifg=DOXYGEN_MAIN
+hi doxygenBody      guifg=DOXYGEN_SECONDARY
+hi doxygenOther     guifg=DOXYGEN_OTHER
+hi doxygenSpecial   guifg=DOXYGEN_OTHER
+hi doxygenParam     guifg=DOXYGEN_OTHER
+hi doxygenComment   guifg=DOXYGEN_DECORATION
+hi doxygenPrevL     guifg=DOXYGEN_DECORATION
+
+" Scala "
+
+hi scalaCapitalWord         guifg=TYPE_FG
+hi scalaCaseFollowing       guifg=SPECIAL_FG
+hi scalaInstanceDeclaration guifg=TYPE_FG gui=bold
+hi scalaNameDefinition      guifg=MAIN_FG
+hi scalaSpecial             guifg=CHARACTER_FG
+hi scalaInterpolation       guibg=LITERAL_BG guifg=CHARACTER_FG
+
+
