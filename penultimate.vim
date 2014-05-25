@@ -6,6 +6,72 @@
 " Version:  $Id: penultimate.vim, v 1.0$      "
 "                                             "
 " Based on: Desert by Hans Fugal              "
+
+" Cterm colors "
+
+hi SpecialKey term=bold ctermfg=51
+hi NonText term=bold cterm=bold ctermfg=21
+hi Directory term=bold ctermfg=51
+hi ErrorMsg term=standout ctermfg=231 ctermbg=196
+hi IncSearch term=reverse cterm=reverse
+hi Search term=reverse ctermfg=16 ctermbg=226
+hi MoreMsg term=bold cterm=bold ctermfg=29
+hi ModeMsg term=bold cterm=bold
+hi LineNr term=underline ctermfg=226
+hi CursorLineNr term=bold cterm=bold ctermfg=226
+hi Question term=standout cterm=bold ctermfg=46
+hi StatusLine term=bold,reverse cterm=bold,reverse
+hi StatusLineNC term=reverse cterm=reverse
+hi VertSplit term=reverse cterm=reverse
+hi Title term=bold cterm=bold ctermfg=201
+hi Visual term=reverse ctermbg=248
+hi VisualNOS term=bold,underline cterm=bold,underline
+hi WarningMsg term=standout ctermfg=196
+hi WildMenu term=standout ctermfg=16 ctermbg=226
+hi Folded term=standout ctermfg=51 ctermbg=248
+hi FoldColumn term=standout ctermfg=51 ctermbg=250
+hi DiffAdd term=bold ctermbg=18
+hi DiffChange term=bold ctermbg=90
+hi DiffDelete term=bold cterm=bold ctermfg=21 ctermbg=30
+hi DiffText term=reverse cterm=bold ctermbg=196
+hi SignColumn term=standout ctermfg=51 ctermbg=250
+hi Conceal ctermfg=252 ctermbg=248
+hi SpellBad term=reverse cterm=undercurl ctermfg=196
+hi SpellCap term=reverse cterm=undercurl ctermfg=21
+hi SpellRare term=reverse cterm=undercurl ctermfg=201
+hi SpellLocal term=underline cterm=undercurl ctermfg=51
+hi Pmenu ctermbg=201
+hi PmenuSel ctermbg=248
+hi PmenuSbar ctermbg=250
+hi PmenuThumb ctermbg=231
+hi TabLine term=underline cterm=underline ctermbg=248
+hi TabLineSel term=bold cterm=bold
+hi TabLineFill term=reverse cterm=reverse
+hi CursorColumn term=reverse ctermbg=241
+hi CursorLine term=underline ctermbg=241
+hi ColorColumn term=reverse ctermbg=88
+hi Cursor ctermfg=231 ctermbg=16
+hi lCursor ctermfg=231 ctermbg=16
+hi MatchParen term=reverse ctermbg=30
+hi Normal ctermfg=16 ctermbg=0
+hi Error term=reverse ctermfg=231 ctermbg=196
+hi Comment term=bold ctermfg=111
+hi Constant term=underline ctermfg=217
+hi Special term=bold ctermfg=214
+hi Identifier term=underline ctermfg=87
+hi Statement term=bold cterm=bold ctermfg=227
+hi PreProc term=underline ctermfg=213
+hi Type term=underline cterm=bold ctermfg=83
+hi Underlined term=underline cterm=underline ctermfg=111
+hi Ignore ctermfg=231
+hi Todo term=standout ctermfg=21 ctermbg=226
+hi quickfix_error cterm=bold ctermfg=16 ctermbg=196
+hi syntax_pimpl_access term=bold ctermfg=242
+hi syntax_qtWarning ctermfg=11
+hi syntax_qtFatal ctermfg=9
+hi syntax_qtCritical ctermfg=9
+
+" GUI "
 set background=dark
 hi clear
 if exists("syntax_on")
@@ -22,7 +88,7 @@ hi Visual guibg=#889988 guifg=#151515
 
 hi Cursor guibg=khaki guifg=black
 hi CursorLine guibg=#282320
-hi ColorColumn guibg=#6f6760
+hi ColorColumn guibg=#331111
 
 hi IncSearch guibg=darkred guifg=wheat
 hi Search guibg=#cc7711 guifg=wheat
