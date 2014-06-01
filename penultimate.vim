@@ -89,6 +89,7 @@ hi Visual guibg=#889988 guifg=#151515
 hi Cursor guibg=khaki guifg=black
 hi CursorLine guibg=#282320
 hi ColorColumn guibg=#331111
+hi SignColumn guibg=#151515
 
 hi IncSearch guibg=darkred guifg=wheat
 hi Search guibg=#cc7711 guifg=wheat

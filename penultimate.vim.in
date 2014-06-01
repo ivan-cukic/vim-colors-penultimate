@@ -70,6 +70,7 @@ hi Visual           guibg=PASSIVE_FG     guifg=MAIN_BG
 hi Cursor           guibg=CURSOR_BG guifg=CURSOR_FG
 hi CursorLine       guibg=CURSOR_LINE_BG
 hi ColorColumn      guibg=END_COLUMN_BG
+hi SignColumn       guibg=MAIN_BG
 
 hi IncSearch        guibg=SEARCH_INC_BG guifg=SEARCH_FG
 hi Search           guibg=SEARCH_BG     guifg=SEARCH_FG
