@@ -109,7 +109,7 @@ hi WildMenu         guibg=CURSOR_LINE_HIGHLIGHT_BG guifg=black gui=bold
 " Syntax highlighting groups "
 
 #define COMMENT_FG           #668888
-#define PREPROC_FG           indianred
+#define PREPROC_FG           #7D3C3C
 #define PREPROC_HIGHLIGHT_FG lightred
 
 #define LITERAL_BG       #0b0b0b
