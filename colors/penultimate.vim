@@ -82,9 +82,9 @@ let g:colors_name="penultimate"
 
 " Normal text "
 
-hi Normal guibg=#151515 guifg=#dddddd
-hi NonText guibg=#101010 guifg=#dddddd
-hi Visual guibg=#889988 guifg=#151515
+hi Normal guibg=#151515 guifg=#bbbbbb
+hi NonText guibg=#101010 guifg=#bbbbbb
+hi Visual guibg=#777777 guifg=#151515
 
 hi Cursor guibg=khaki guifg=black
 hi CursorLine guibg=#282320
@@ -95,7 +95,7 @@ hi IncSearch guibg=darkred guifg=wheat
 hi Search guibg=#cc7711 guifg=wheat
 
 hi SpecialKey gui=bold guifg=yellow guibg=darkred
-hi Conceal gui=bold guifg=yellow guibg=darkred
+hi Conceal guifg=yellow guibg=black gui=bold "ERROR
 
 hi DiffAdd guibg=#152515
 hi DiffChange guibg=#153552
@@ -129,32 +129,47 @@ hi WildMenu guibg=#6f6760 guifg=black gui=bold
 hi Comment guifg=#668888
 
 hi Todo gui=bold guifg=yellow guibg=darkred
-hi String guibg=#0b0b0b guifg=salmon
+hi String guibg=#0b0b0b guifg=#71cfff
 hi Character guibg=#0b0b0b guifg=skyblue
+hi Constant guibg=#0b0b0b guifg=lightgreen
+hi Passive guifg=#777777
 hi Boolean guibg=#0b0b0b gui=bold
 hi BooleanTrue guifg=seagreen2
 hi BooleanFalse guifg=tomato
-hi Constant guibg=#0b0b0b guifg=lightgreen
-hi Passive guifg=#889988
 
 hi Identifier guifg=palegreen
 hi Statement guifg=khaki
-hi PreProc guifg=indianred
+hi PreProc guifg=#7D3C3C
 hi Type guifg=#68bb88 gui=bold
-hi Special guifg=firebrick1
+hi Special guifg=#3daee9
 hi Ignore guifg=#668888
-hi Keyword guifg=#eeee77 gui=bold
+hi Keyword guifg=#eeee77 gui=bold gui=bold
 
 " Language specific "
 
 " C/C++ "
 
-hi cIncluded guifg=lightred
+hi cCustomFunc guifg=#eeeeee
+hi cIncluded guifg=#ad6c6c
 hi cStorageClass guifg=#68bb88 gui=bold
-hi cppStructure guifg=#eeee77 gui=bold
+hi cType guifg=#68bb88 gui=bold
+hi cUserLabel guifg=#eeee77 gui=bold
 
-hi qtMacros guifg=firebrick1
-hi kdeMacros guifg=firebrick1
+hi cppAccess guifg=#eeee77 gui=bold
+hi cppAnnotation guifg=#777777
+hi cppConstKeyword guifg=#68bb88
+hi cppOperator guifg=#3daee9 gui=bold gui=none
+hi cppSTLNamespace guifg=#777777
+hi cppSTLfunction guifg=#eeeeee
+hi cppStructure guifg=#eeee77 gui=bold gui=bold
+hi cppSyntaxNamespaceAccess guifg=#777777
+hi cppTemplateKeyword guifg=#f67400 gui=bold
+hi cppType guifg=#68bb88 gui=bold
+hi cppTypenameKeyword guifg=#777777
+
+hi kdeMacros guifg=#3daee9
+hi qtStatements guifg=#3daee9
+hi qtUnimportant guifg=#777777
 
 
 
@@ -162,19 +177,19 @@ hi kdeMacros guifg=firebrick1
 
 
 hi doxygenBrief guifg=cadetblue3
-hi doxygenSpecialMultilineDesc guifg=cadetblue3
-hi doxygenBody guifg=#889988
+hi doxygenBody guifg=#777777
 hi doxygenOther guifg=deepskyblue1
 hi doxygenSpecial guifg=deepskyblue1
 hi doxygenParam guifg=deepskyblue1
 hi doxygenComment guifg=#333333
 hi doxygenPrevL guifg=#333333
+hi doxygenSpecialMultilineDesc guifg=cadetblue3
 
 " Scala "
 
 hi scalaCapitalWord guifg=#68bb88
-hi scalaCaseFollowing guifg=firebrick1
+hi scalaCaseFollowing guifg=#3daee9
 hi scalaInstanceDeclaration guifg=#68bb88 gui=bold
-hi scalaNameDefinition guifg=#dddddd
+hi scalaNameDefinition guifg=#bbbbbb
 hi scalaSpecial guifg=skyblue
 hi scalaInterpolation guibg=#0b0b0b guifg=skyblue

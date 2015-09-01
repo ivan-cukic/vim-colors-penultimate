@@ -15,13 +15,13 @@
 
 #define MAIN_BG        #151515
 #define MAIN_DARKER_BG #101010
-#define MAIN_FG        #dddddd
+#define MAIN_FG        #bbbbbb
 
 #define MAIN_GREEN_BG  #152515
 #define MAIN_RED_BG    #552525
 #define MAIN_BLUE_BG   #153552
 
-#define PASSIVE_FG     #889988
+#define PASSIVE_FG     #777777
 #define TRANSLUCENT_FG #333333
 
 #define END_COLUMN_BG  #331111
@@ -76,7 +76,7 @@ hi IncSearch        guibg=SEARCH_INC_BG guifg=SEARCH_FG
 hi Search           guibg=SEARCH_BG     guifg=SEARCH_FG
 
 hi SpecialKey       ERROR
-hi Conceal          ERROR
+hi Conceal          guifg=yellow guibg=black gui=bold "ERROR
 
 hi DiffAdd          guibg=MAIN_GREEN_BG
 hi DiffChange       guibg=MAIN_BLUE_BG
@@ -110,64 +110,81 @@ hi WildMenu         guibg=CURSOR_LINE_HIGHLIGHT_BG guifg=black gui=bold
 
 #define COMMENT_FG           #668888
 #define PREPROC_FG           #7D3C3C
-#define PREPROC_HIGHLIGHT_FG lightred
+#define PREPROC_HIGHLIGHT_FG #ad6c6c
 
-#define LITERAL_BG       #0b0b0b
-#define LITERAL_FG       lightgreen
-#define STRING_FG        salmon
-#define CHARACTER_FG     skyblue
-#define BOOLEAN_TRUE_FG  seagreen2
-#define BOOLEAN_FALSE_FG tomato
+#define LITERAL_BG           #0b0b0b
+#define LITERAL_FG           lightgreen
+#define STRING_FG            #71cfff
+#define CHARACTER_FG         skyblue
+#define BOOLEAN_TRUE_FG      seagreen2
+#define BOOLEAN_FALSE_FG     tomato
 
-#define IDENTIFIER_FG    palegreen
-#define STATEMENT_FG     khaki
-#define TYPE_FG          #68bb88
-#define SPECIAL_FG       firebrick1
-#define KEYWORD_FG       #eeee77
+#define IDENTIFIER_FG        palegreen
+#define STATEMENT_FG         khaki
+#define TYPE_FG              #68bb88
+#define SPECIAL_FG           #3daee9
+#define KEYWORD_FG           #eeee77 gui=bold
+#define HIGHLIGHT_FG         #3daee9 gui=bold
+#define FUNCTION_FG          #eeeeee
 
 hi Comment          guifg=COMMENT_FG
 
 hi Todo             ERROR
-hi String           guibg=LITERAL_BG guifg=STRING_FG
-hi Character        guibg=LITERAL_BG guifg=CHARACTER_FG
-hi Boolean          guibg=LITERAL_BG gui=bold
+hi String           guibg=LITERAL_BG       guifg=STRING_FG
+hi Character        guibg=LITERAL_BG       guifg=CHARACTER_FG
+hi Constant         guibg=LITERAL_BG       guifg=LITERAL_FG
+hi Passive          guifg=PASSIVE_FG
+hi Boolean          guibg=LITERAL_BG       gui=bold
 hi BooleanTrue      guifg=BOOLEAN_TRUE_FG
 hi BooleanFalse     guifg=BOOLEAN_FALSE_FG
-hi Constant         guibg=LITERAL_BG guifg=LITERAL_FG
-hi Passive          guifg=PASSIVE_FG
 
 hi Identifier       guifg=IDENTIFIER_FG
 hi Statement        guifg=STATEMENT_FG
 hi PreProc          guifg=PREPROC_FG
-hi Type             guifg=TYPE_FG gui=bold
+hi Type             guifg=TYPE_FG          gui=bold
 hi Special          guifg=SPECIAL_FG
 hi Ignore           guifg=COMMENT_FG
-hi Keyword          guifg=KEYWORD_FG gui=bold
+hi Keyword          guifg=KEYWORD_FG       gui=bold
 
 " Language specific "
 
 " C/C++ "
 
-hi cIncluded        guifg=PREPROC_HIGHLIGHT_FG
-hi cStorageClass    guifg=TYPE_FG gui=bold
-hi cppStructure     guifg=KEYWORD_FG gui=bold
+hi cCustomFunc              guifg=FUNCTION_FG
+hi cIncluded                guifg=PREPROC_HIGHLIGHT_FG
+hi cStorageClass            guifg=TYPE_FG      gui=bold
+hi cType                    guifg=TYPE_FG      gui=bold
+hi cUserLabel               guifg=KEYWORD_FG
 
-hi qtMacros         guifg=SPECIAL_FG
-hi kdeMacros        guifg=SPECIAL_FG
+hi cppAccess                guifg=KEYWORD_FG
+hi cppAnnotation            guifg=PASSIVE_FG
+hi cppConstKeyword          guifg=TYPE_FG
+hi cppOperator              guifg=HIGHLIGHT_FG gui=none
+hi cppSTLNamespace          guifg=PASSIVE_FG
+hi cppSTLfunction           guifg=FUNCTION_FG
+hi cppStructure             guifg=KEYWORD_FG   gui=bold
+hi cppSyntaxNamespaceAccess guifg=PASSIVE_FG
+hi cppTemplateKeyword       guifg=#f67400      gui=bold
+hi cppType                  guifg=TYPE_FG      gui=bold
+hi cppTypenameKeyword       guifg=PASSIVE_FG
+
+hi kdeMacros                guifg=SPECIAL_FG
+hi qtStatements             guifg=SPECIAL_FG
+hi qtUnimportant            guifg=PASSIVE_FG
 
 #define DOXYGEN_MAIN       cadetblue3
 #define DOXYGEN_DECORATION TRANSLUCENT_FG
 #define DOXYGEN_SECONDARY  PASSIVE_FG
-#define DOXYGEN_OTHER deepskyblue1
+#define DOXYGEN_OTHER      deepskyblue1
 
 hi doxygenBrief     guifg=DOXYGEN_MAIN
-hi doxygenSpecialMultilineDesc guifg=DOXYGEN_MAIN
 hi doxygenBody      guifg=DOXYGEN_SECONDARY
 hi doxygenOther     guifg=DOXYGEN_OTHER
 hi doxygenSpecial   guifg=DOXYGEN_OTHER
 hi doxygenParam     guifg=DOXYGEN_OTHER
 hi doxygenComment   guifg=DOXYGEN_DECORATION
 hi doxygenPrevL     guifg=DOXYGEN_DECORATION
+hi doxygenSpecialMultilineDesc guifg=DOXYGEN_MAIN
 
 " Scala "
 
