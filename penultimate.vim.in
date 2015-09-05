@@ -195,4 +195,7 @@ hi scalaNameDefinition      guifg=MAIN_FG
 hi scalaSpecial             guifg=CHARACTER_FG
 hi scalaInterpolation       guibg=LITERAL_BG guifg=CHARACTER_FG
 
+" TagBar
+
+hi link TagbarSignature Passive
 
