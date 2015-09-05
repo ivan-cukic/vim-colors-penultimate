@@ -76,7 +76,7 @@ hi IncSearch        guibg=SEARCH_INC_BG guifg=SEARCH_FG
 hi Search           guibg=SEARCH_BG     guifg=SEARCH_FG
 
 hi SpecialKey       ERROR
-hi Conceal          guifg=yellow guibg=black gui=bold "ERROR
+hi Conceal          guifg=yellow guibg=black gui=bold
 
 hi DiffAdd          guibg=MAIN_GREEN_BG
 hi DiffChange       guibg=MAIN_BLUE_BG
@@ -195,7 +195,7 @@ hi scalaNameDefinition      guifg=MAIN_FG
 hi scalaSpecial             guifg=CHARACTER_FG
 hi scalaInterpolation       guibg=LITERAL_BG guifg=CHARACTER_FG
 
-" TagBar
+" TagBar "
 
 hi link TagbarSignature Passive
 

@@ -95,7 +95,7 @@ hi IncSearch guibg=darkred guifg=wheat
 hi Search guibg=#cc7711 guifg=wheat
 
 hi SpecialKey gui=bold guifg=yellow guibg=darkred
-hi Conceal guifg=yellow guibg=black gui=bold "ERROR
+hi Conceal guifg=yellow guibg=black gui=bold
 
 hi DiffAdd guibg=#152515
 hi DiffChange guibg=#153552
@@ -193,3 +193,7 @@ hi scalaInstanceDeclaration guifg=#68bb88 gui=bold
 hi scalaNameDefinition guifg=#bbbbbb
 hi scalaSpecial guifg=skyblue
 hi scalaInterpolation guibg=#0b0b0b guifg=skyblue
+
+" TagBar "
+
+hi link TagbarSignature Passive
